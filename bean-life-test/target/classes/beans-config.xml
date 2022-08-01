@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<!DOCTYPE beans PUBLIC "-//SPRING/DTD BEAN/EN"-->
+<!--        "http://www.springframework.org/dtd/spring-beans.dtd">-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <context:annotation-config/>
+
+
+<bean id="student"
+      class="com.lin.demo.test.Student">
+    <property name="name">
+        <value>lin</value>
+    </property>
+</bean>
+<bean id="student1"
+      class="com.lin.demo.test.StudentSecond">
+    <property name="name">
+        <value>lin</value>
+    </property>
+</bean>
+<!--    bean 实例化前置处理-->
+<!--    <bean id="beforeInstantiationBeanPostProcess" class="com.lin.demo.test.BeforeInstantiationBeanPostProcess">-->
+
+<!--    bean 实例化-->
+<!--    <bean id="myInstantiationBeanPostProcess" class="com.lin.demo.test.MyInstantiationBeanPostProcess">-->
+<!--    </bean>-->
+
+<!--    Bean 实例化后置处理-->
+<!--    </bean>-->
+<!--    <bean id="afterInstantiationBeanPostProcess" class="com.lin.demo.test.AfterInstantiationBeanPostProcess">-->
+<!--    </bean>-->
+
+<!--    bean 属性装配-->
+<!--    <bean id="processPropertiesBeanPostProcess" class="com.lin.demo.test.ProcessPropertiesBeanPostProcess">-->
+<!--    </bean>-->
+
+<!--    执行Aware 接口回调-->
+<!--    <bean id="myAwareBean" class="com.lin.demo.test.MyAwareBean">-->
+<!--     </bean>-->
+
+<!--    bean 初始化前操作-->
+<!--    <bean id="myApplicationContextAware" class="com.lin.demo.test.MyApplicationContextAware"/>-->
+
+<!--    Bean初始化-->
+<!--    <bean id="studentInitializingBean" class="com.lin.demo.test.StudentInitializingBean" init-method="init"/>-->
+
+<!--    Bean初始化后置处理-->
+<!--    <bean id="myAfterInitializationBeanPostProcess"  class="com.lin.demo.test.MyAfterInitializationBeanPostProcess"/>-->
+
+<!--    所有单例执行完成之后-->
+<!--    <bean id="myAfterSingletonsInstantiated"  class="com.lin.demo.test.MyAfterSingletonsInstantiated"/>-->
+
+<!--        <bean id="target" class="com.lin.demo.test.TargetImpl"/>-->
+<!--        <bean id="myAspect" class="com.lin.demo.test.MyAspect"/>-->
+
+<!--        <aop:config>-->
+<!--            &lt;!&ndash;引用myAspect的Bean为切面对象&ndash;&gt;-->
+<!--            <aop:aspect ref="myAspect">-->
+<!--                &lt;!&ndash;配置Target的method方法执行时要进行myAspect的before方法前置增强&ndash;&gt;-->
+<!--                <aop:before method="before" pointcut="execution(public void com.lin.demo.test.Target.method())"></aop:before>-->
+<!--            </aop:aspect>-->
+<!--        </aop:config>-->
+
+
+</beans>
